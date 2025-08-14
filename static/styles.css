@@ -1,102 +1,131 @@
+:root {
+  --primary-color: orange;
+  --secondary-color: yellow;
+  --accent1-color: green;
+  --accent2-color: brown;
+  --button-color: red;
+  --background: white;
+  --heading-font: "Montserrat", sans-serif;
+  --body-font: "Fira Sans Condensed", sans-serif;
+}
 
-    :root {
-    --primary-color: orange;
-    --secondary-color: yellow;
-    --accent1-color: green;
-    --accent2-color: brown;
-    --button-color: red;
-    --background: white;
-    --heading-font: "Montserrat", sans-serif;
-    --body-font: "Fira Sans Condensed", sans-serif;
+/* Reset some default margin/padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-h1 {
-    font-size: 2rem;
-    align-items: center;
-    align-content: center;
+
+body {
+  font-family: var(--body-font), sans-serif;
+  background-color: var(--background);
+  color: #333;
 }
-/* Parent container */
+
+/* Header styling */
 header {
-  
-  justify-content: center;   /* center horizontally */
-  align-items: center;       /* center vertically */
-  height: 100px;             /* or whatever fits your layout */
-  text-align: center;
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  justify-content: center; 
+  align-items: center;
+  height: auto; /* allow height to adjust */
   padding: 20px;
-}
-
-.welcome-message {
+  margin-bottom: 20px;
   text-align: center;
-  font-size: 1.5rem;
+  background-color: var(--secondary-color);
+  font-family: var(--heading-font);
+}
+
+
+h1 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+/* Welcome message below the header */
+.welcome-message {
+  margin-top: 10px;
+  font-size: 1.2rem;
   color: #555;
-  margin-top: 10px;
-  font-family: var(--body-font, sans-serif);
+  font-family: var(--body-font);
 }
 
 
-    .first_set {
+/* Container for food items */
+.first_set,
+.second_set {
   display: flex;
-  flex-wrap: wrap;  /* allows wrapping to next line */
+  flex-wrap: wrap;
   gap: 20px;
   width: 100%;
-  margin-top: 10px;
   padding: 0 10px;
+  margin-top: 10px;
   box-sizing: border-box;
-  
+  justify-content: center;
 }
 
-    .food-item {
-      flex: 0 0 calc((100% - 80px) / 5); /* 5 items per row, 4 gaps of 20px = 80px */
-    box-sizing: border-box;
-      box-sizing: border-box;
-      border: 2px solid red;
-      padding: 15px;
-      text-align: center;
-      background-color: #fff8dc;
-    }
-    .food-item img {
-      width: 100%;
-      border-radius: 8px;
-      height: 35vh;
-    }
+/* Food item card */
+.food-item {
+  flex: 1 1 calc((100% - 80px) / 5); /* 5 items per row with gaps */
+  min-width: 150px; /* prevent too narrow on small screens */
+  border: 2px solid red;
+  padding: 15px;
+  text-align: center;
+  background-color: #fff8dc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
 
-  button:hover {
-  /* Example: Make the button scale up 1.5 times */
+/* Scale up on hover */
+.food-item:hover {
+  transform: scale(1.05);
+}
+
+/* Food item images */
+.food-item img {
+  width: 100%;
+  height: auto;      /* keep aspect ratio */
+  max-height: 35vh;  /* limit max height */
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* Button styling */
+.food-item button {
+  background-color: var(--button-color);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.food-item button:hover {
+  background-color: darkorange;
   transform: scale(1.2);
-  transition: transform 0.3s ease; /* smooth transition */
   color: blueviolet;
 }
 
-
-
-    .second_set {
-  display: flex;
-  flex-wrap: wrap;  /* allows wrapping to next line */
-  gap: 20px;
-  width: 100%;
-  margin-top: 10px;
-  padding: 0 10px;
-  box-sizing: border-box;
-  
+/* Responsive breakpoints */
+@media (max-width: 1000px) {
+  .food-item {
+    flex: 1 1 calc((100% - 40px) / 3); /* 3 items per row */
+  }
 }
 
-    .food-item {
-      flex: 0 0 calc((100% - 80px) / 5); /* 5 items per row, 4 gaps of 20px = 80px */
-    box-sizing: border-box;
-      box-sizing: border-box;
-      border: 2px solid red;
-      padding: 15px;
-      text-align: center;
-      background-color: #fff8dc;
-    }
-    .food-item img {
-      width: 100%;
-      border-radius: 8px;
-      height: 35vh;
-    }
+@media (max-width: 700px) {
+  .food-item {
+    flex: 1 1 calc((100% - 20px) / 2); /* 2 items per row */
+  }
+}
 
-  button:hover {
-  /* Example: Make the button scale up 1.5 times */
-  transform: scale(1.2);
-  transition: transform 0.3s ease; /* smooth transition */
-  color: blueviolet;
+@media (max-width: 400px) {
+  .food-item {
+    flex: 1 1 100%; /* 1 item per row */
+  }
 }
