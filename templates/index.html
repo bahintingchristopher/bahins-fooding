@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bahins Fooding</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+  <header>
+  <h1>Welcome to Bahins Fooding</h1>
+  <p class="welcome-message">Delicious meals made with love — explore our menu and enjoy your favorites today!</p>
+</header>
+  <main>
+    <div class="first_set">
+    <div class="food-item">
+      <img src="{{ url_for('static', filename='images/burger.jfif') }}" alt="Burger">
+      <h3>Cheesy Burger</h3>
+      <p>Juicy grilled burger with cheddar</p>
+      <span>₱89.00</span>
+      <button>Add to Cart</button>
+    </div>
+ <div class="food-item">
+      <img src="{{ url_for('static', filename='images/cake.jfif') }}" alt="Cake">
+      <h3>Sweetie Cake</h3>
+      <p>Sweet Cake with original Sugar</p>
+      <span>₱501.00</span>
+      <button>Add to Cart</button>
+    </div>
+     <div class="food-item">
+      <img src="{{ url_for('static', filename='images/fried_chicken_combo.jfif') }}" alt="fried_chicken">
+      <h3>Live Fried Chicken</h3>
+      <p>Male Live Fried Chicken</p>
+      <span>₱88.00</span>
+      <button>Add to Cart</button>
+    </div>
+  <div class="food-item">
+      <img src="{{ url_for('static', filename='images/fries.jfif') }}" alt="fried">
+      <h3>Jumbo Fries</h3>
+      <p>Smuggled Jumbo Fries</p>
+      <span>₱99.00</span>
+      <button>Add to Cart</button>
+    </div>
+ <div class="food-item">
+      <img src="{{ url_for('static', filename='images/hotdog.jfif') }}" alt="hotdog">
+      <h3>Jumbo Hotdog</h3>
+      <p>Jumbo Hotdog</p>
+      <span>₱90.00</span>
+      <button>Add to Cart</button>
+    </div>
+    </div>
+
+     <div class="second_set">
+    <div class="food-item">
+      <img src="{{ url_for('static', filename='images/humba.jfif') }}" alt="humba">
+      <h3>Yummy Humba</h3>
+      <p>Juicy Yummy Humba</p>
+      <span>₱35.00</span>
+      <button>Add to Cart</button>
+    </div>
+ <div class="food-item">
+      <img src="{{ url_for('static', filename='images/ice_cream.jfif') }}" alt="ice_cream">
+      <h3>Melted Ice Cream</h3>
+      <p>Melted Ice Cream</p>
+      <span>₱501.00</span>
+      <button>Add to Cart</button>
+    </div>
+     <div class="food-item">
+      <img src="{{ url_for('static', filename='images/letson_manok.jfif') }}" alt="letson_manok">
+      <h3>Letson Manok</h3>
+      <p>Letson Manok</p>
+      <span>₱75.00</span>
+      <button>Add to Cart</button>
+    </div>
+  <div class="food-item">
+      <img src="{{ url_for('static', filename='images/menudo.jfif') }}" alt="menudo">
+      <h3>menudo</h3>
+      <p>menudo</p>
+      <span>₱97.00</span>
+      <button>Add to Cart</button>
+    </div>
+ <div class="food-item">
+      <img src="{{ url_for('static', filename='images/sandae.jfif') }}" alt="sandae">
+      <h3>Sandae</h3>
+      <p>Black Saturday Sandae</p>
+      <span>₱81.00</span>
+      <button>Add to Cart</button>
+    </div>
+    </div>
+
+    <!-- Repeat for other food items -->
+  </main>
+</body>
+</html>

@@ -1,0 +1,102 @@
+
+    :root {
+    --primary-color: orange;
+    --secondary-color: yellow;
+    --accent1-color: green;
+    --accent2-color: brown;
+    --button-color: red;
+    --background: white;
+    --heading-font: "Montserrat", sans-serif;
+    --body-font: "Fira Sans Condensed", sans-serif;
+}
+h1 {
+    font-size: 2rem;
+    align-items: center;
+    align-content: center;
+}
+/* Parent container */
+header {
+  
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* center vertically */
+  height: 100px;             /* or whatever fits your layout */
+  text-align: center;
+  padding: 20px;
+}
+
+.welcome-message {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #555;
+  margin-top: 10px;
+  font-family: var(--body-font, sans-serif);
+}
+
+
+    .first_set {
+  display: flex;
+  flex-wrap: wrap;  /* allows wrapping to next line */
+  gap: 20px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  
+}
+
+    .food-item {
+      flex: 0 0 calc((100% - 80px) / 5); /* 5 items per row, 4 gaps of 20px = 80px */
+    box-sizing: border-box;
+      box-sizing: border-box;
+      border: 2px solid red;
+      padding: 15px;
+      text-align: center;
+      background-color: #fff8dc;
+    }
+    .food-item img {
+      width: 100%;
+      border-radius: 8px;
+      height: 35vh;
+    }
+
+  button:hover {
+  /* Example: Make the button scale up 1.5 times */
+  transform: scale(1.2);
+  transition: transform 0.3s ease; /* smooth transition */
+  color: blueviolet;
+}
+
+
+
+    .second_set {
+  display: flex;
+  flex-wrap: wrap;  /* allows wrapping to next line */
+  gap: 20px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  
+}
+
+    .food-item {
+      flex: 0 0 calc((100% - 80px) / 5); /* 5 items per row, 4 gaps of 20px = 80px */
+    box-sizing: border-box;
+      box-sizing: border-box;
+      border: 2px solid red;
+      padding: 15px;
+      text-align: center;
+      background-color: #fff8dc;
+    }
+    .food-item img {
+      width: 100%;
+      border-radius: 8px;
+      height: 35vh;
+    }
+
+  button:hover {
+  /* Example: Make the button scale up 1.5 times */
+  transform: scale(1.2);
+  transition: transform 0.3s ease; /* smooth transition */
+  color: blueviolet;
+}
